@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShowGifView">
+        <attr name="gifsrc" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="ChoiceEdit">
+        <attr name="entries" format="reference" />
+		<attr name="value" format="reference" />    </declare-styleable>
+    
+    <declare-styleable name="Preview">
+        <attr name="bgsrc" format="reference" />
+        <attr name="thumb1" format="reference" />
+        <attr name="src1" format="reference" />
+        <attr name="thumb2" format="reference" />
+        <attr name="src2" format="reference" />    </declare-styleable>
+
+    <declare-styleable name="Tabview">
+        <attr name="tabnum" format="integer"></attr>
+    </declare-styleable>    
+
+</resources>

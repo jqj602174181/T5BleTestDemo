@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+   
+      <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="30dp"
+         android:layout_marginRight="30dp"
+         android:orientation="horizontal" >
+         
+          <Button
+               android:id="@+id/btn_TxDetail"
+               style="@style/bigButton"
+               android:text="设置9F02:" />
+
+         <EditText
+             android:background="@layout/rounded_edittext_states"
+             android:id="@+id/et_TxDetail"
+             android:layout_width="match_parent"
+             android:layout_height="45dp"
+             android:layout_marginTop="10dip"
+             android:inputType="text"
+             android:textSize="25dip" />
+      </LinearLayout>
+     
+      <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="30dp"
+         android:orientation="horizontal" >
+
+         <TextView
+             
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dip"
+             android:text="标签编码："
+             android:textColor="@android:color/black"
+             android:textSize="25dip" />
+
+         <EditText
+             android:background="@layout/rounded_edittext_states"
+             android:id="@+id/et_labelNum"
+             android:layout_width="100dp"
+             android:layout_height="45dp"
+             android:gravity="center_horizontal"
+             android:layout_marginTop="10dip"
+             android:inputType="text"
+             android:focusable="false"
+             android:textSize="25dip" />
+      </LinearLayout>
+
+        
+   	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
+		
+		<TableLayout
+			android:layout_width="match_parent"
+	    	android:layout_height="wrap_content">
+
+		    <TableRow android:padding="5dp">
+	        	<TextView
+	        	    android:gravity="right"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:text="IC卡号："
+	                android:textColor="@android:color/black"
+	                android:textSize="25sp" />
+	
+	            <EditText
+	                android:id="@+id/et_ICcardNo"
+					android:layout_weight="2"
+			        android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:background="@layout/rounded_edittext_states"
+	                android:enabled="true"
+	                android:inputType="textMultiLine"
+	                android:maxLines="2"
+	                android:minLines="2"
+	                android:scrollbars="vertical"
+	                android:textSize="25sp" 
+	                android:focusable="false">
+	            </EditText>
+	       	</TableRow>  		    	
+		    <TableRow android:padding="5dp">
+	        	<TextView
+	        	    android:gravity="right"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:text="五五域："
+	                android:textColor="@android:color/black"
+	                android:textSize="25sp" />
+	
+	            <EditText
+	                android:id="@+id/et_domains"
+					android:layout_weight="2"
+			        android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:background="@layout/rounded_edittext_states"
+	                android:enabled="true"
+	                android:inputType="textMultiLine"
+	                android:maxLines="4"
+	                android:minLines="2"
+	                android:scrollbars="vertical"
+	                android:textSize="25sp" 
+	                android:focusable="false">
+	            </EditText>
+	       	</TableRow> 
+	       	
+		      <TableRow android:padding="5dp">
+		        	<TextView
+		        	    android:gravity="right"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="二磁道："
+		                android:textColor="@android:color/black"
+		                android:textSize="25sp" />
+		
+		            <EditText
+		                android:id="@+id/et_id_track2"
+						android:layout_weight="2"
+				        android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:background="@layout/rounded_edittext_states"
+		                android:enabled="true"
+		                android:inputType="textMultiLine"
+		                android:maxLines="4"
+		                android:minLines="2"
+		                android:scrollbars="vertical"
+		                android:textSize="25sp" 
+		                android:focusable="false">
+		            </EditText>
+		       	</TableRow>   
+		       	
+			    
+			    	
+			    <TableRow android:padding="5dp">
+		        	<TextView
+		        	    android:gravity="right"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="应用序列号："
+		                android:textColor="@android:color/black"
+		                android:textSize="25sp" />
+		
+		            <EditText
+		                android:id="@+id/et_id_icSerialNo"
+						android:layout_weight="2"
+				        android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:background="@layout/rounded_edittext_states"
+		                android:enabled="true"
+		                android:inputType="textMultiLine"
+		                android:maxLines="4"
+		                android:minLines="2"
+		                android:scrollbars="vertical"
+		                android:textSize="25sp" 
+		                android:focusable="false">
+		            </EditText>
+		       	</TableRow>   	     	
+     
+			    <TableRow android:padding="5dp">
+		        	<TextView
+		        	    android:gravity="right"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="磁卡卡号："
+		                android:textColor="@android:color/black"
+		                android:textSize="25sp" />
+		
+		            <EditText
+		                android:id="@+id/et_MsgcardNo"
+						android:layout_weight="2"
+				        android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:background="@layout/rounded_edittext_states"
+		                android:enabled="true"
+		                android:inputType="textMultiLine"
+		                android:maxLines="2"
+		                android:minLines="2"
+		                android:scrollbars="vertical"
+		                android:textSize="25sp" 
+		                android:focusable="false">
+		            </EditText>
+		       	</TableRow>  		    	
+			  
+
+			    <TableRow android:padding="5dp">
+		        	<TextView
+		        	    android:gravity="right"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:text="三磁道："
+		                android:textColor="@android:color/black"
+		                android:textSize="25sp" />
+		
+		            <EditText
+		                android:id="@+id/et_id_track3"
+						android:layout_weight="2"
+				        android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:background="@layout/rounded_edittext_states"
+		                android:enabled="true"
+		                android:inputType="textMultiLine"
+		                android:maxLines="4"
+		                android:minLines="2"
+		                android:scrollbars="vertical"
+		                android:textSize="25sp" 
+		                android:focusable="false">
+		            </EditText>
+		       	</TableRow> 
+	                	     	
+       	</TableLayout>
+
+ </LinearLayout>
+    
+   	<LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal"
+           android:orientation="horizontal" >
+
+           <Button
+               android:id="@+id/bt_readinfo"
+               style="@style/bigButton"
+               android:text="读取信息" />
+   </LinearLayout>
+    
+
+</LinearLayout>
+
+
+
+<!-- 
+
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
+     
+        
+		<Button
+                android:id="@+id/bt_fpcode"
+                style="@style/smallButton"
+                android:layout_alignParentRight="true"
+                android:text="读特征" />
+        <EditText
+            android:id="@+id/et_fpcode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@layout/rounded_edittext_states"
+            android:enabled="true"
+            android:focusable="false"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical"
+            android:textSize="25sp" >
+        </EditText>
+    </LinearLayout>
+
+
+ -->

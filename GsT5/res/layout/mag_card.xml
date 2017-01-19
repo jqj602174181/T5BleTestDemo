@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="卡号："
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_cardNo"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@layout/rounded_edittext_states"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:scrollbars="vertical"
+                    android:textSize="15sp" >
+                </EditText>
+            </TableRow>
+
+            <TableRow android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="二磁道："
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_track2"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@layout/rounded_edittext_states"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:minLines="2"
+                    android:scrollbars="vertical"
+                    android:textSize="15sp" >
+                </EditText>
+            </TableRow>
+
+            <TableRow android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="三磁道："
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_track3"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@layout/rounded_edittext_states"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:minLines="2"
+                    android:scrollbars="vertical"
+                    android:textSize="15sp" >
+                </EditText>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_ci"
+                style="@style/bigButton"
+                android:layout_height="50dp"
+                android:text="读取信息" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/settingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:background="@drawable/back_menu"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <!-- 添加一个Fragment -->
+
+        <fragment
+            android:id="@+id/list"
+            android:name="com.centerm.T5.SettingListFragment"
+            android:layout_width="120dp"
+            android:layout_height="match_parent" />
+
+        <!-- 添加一个viewflipper容器 -->
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bdbj" />
+    </LinearLayout>
+
+</RelativeLayout>

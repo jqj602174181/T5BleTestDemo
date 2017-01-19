@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp" >
+
+        <TableLayout
+            android:id="@+id/tablelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TableRow android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="SM2密钥对："
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/sm2_key"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="3"
+                    android:background="@layout/rounded_edittext_states"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:gravity="left"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:minLines="2"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="vertical"
+                    android:textSize="15sp" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/bt_getsm2"
+                    style="@style/smallButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="注入SM2密钥" />
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:text="SM4秘钥："
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/sm4_key"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="3"
+                    android:background="@layout/rounded_edittext_states"
+                    android:gravity="left"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:minLines="2"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="vertical"
+                    android:textSize="15sp" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/bt_sendsm4"
+                    style="@style/smallButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="灌入密钥" />
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:text="账号："
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/account"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="3"
+                    android:background="@layout/rounded_edittext_states"
+                    android:gravity="left"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:minLines="2"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="vertical"
+                    android:textSize="15sp" >
+                </EditText>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/bt_readpin"
+            style="@style/smallButton"
+            android:layout_below="@id/tablelayout"
+            android:layout_marginLeft="135dp"
+            android:text="读取密码" />
+
+        <TableLayout
+            android:id="@+id/pinTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_readpin"
+            android:layout_marginLeft="50dp" >
+
+            <TableRow android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:text="密文："
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_pw"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2"
+                    android:background="@layout/rounded_edittext_states"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:gravity="left"
+                    android:maxLines="10"
+                    android:minLines="5"
+                    android:scrollHorizontally="true"
+                    android:textSize="15sp" >
+                </EditText>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/bt_decPin"
+            style="@style/smallButton"
+            android:layout_below="@id/pinTableLayout"
+            android:layout_marginLeft="135dp"
+            android:text="解密"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_decPin"
+            android:layout_marginLeft="50dp"
+            android:visibility="gone" >
+
+            <TableRow android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:text="明文："
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_decPin"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@layout/rounded_edittext_states"
+                    android:focusable="false"
+                    android:gravity="left"
+                    android:scrollHorizontally="true"
+                    android:textSize="15sp" >
+                </EditText>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</LinearLayout>

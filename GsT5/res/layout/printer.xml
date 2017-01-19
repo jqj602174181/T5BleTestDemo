@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <EditText
+            android:id="@+id/et_textToBePrinted"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@layout/rounded_edittext_states"
+            android:enabled="true"
+            android:maxLines="10"
+            android:minLines="3"
+            android:scrollbars="vertical"
+            android:textSize="25sp" >
+    </EditText>
+    <Button
+            android:id="@+id/bt_print"
+            style="@style/smallButton"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentRight="true"
+            android:text="打印" />
+
+</LinearLayout>
