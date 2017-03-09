@@ -4,7 +4,7 @@ package com.centerm.blecentral.blelibrary.utils;
  * Created by jqj on 2016/5/24.
  */
 public final class MsgSender {
-	private static final int DEFAULT_SIZE = 20;
+	private static final int DEFAULT_SIZE = 450;
 	private ISender sender;
 
 

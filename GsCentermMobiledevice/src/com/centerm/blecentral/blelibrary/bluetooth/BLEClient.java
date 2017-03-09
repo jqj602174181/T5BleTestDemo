@@ -51,6 +51,7 @@ public final class BLEClient implements DeviceIntf{
 	private static BLEClient instance = null;
 	
 	private int timeOut = 0;
+	private byte[] mBuffer = null;
 
 	public static BLEClient getInstance(){
 		if(instance == null){
@@ -74,7 +75,8 @@ public final class BLEClient implements DeviceIntf{
 		msgReceiver = new MsgReceiver(new MsgReceiver.IReceiver() {
 			@Override
 			public void receiveData(byte[] data) {
-				ibleCallback.onDataReceived(data);
+//				ibleCallback.onDataReceived(data);
+				mBuffer = Arrays.copyOf(data, data.length);
 			}
 		});
 		msgQueue = new MsgQueue<>();
@@ -155,7 +157,8 @@ public final class BLEClient implements DeviceIntf{
 					Log.e(TAG, "Discover Services failed");
 					return;
 				}
-				bluetoothGatt.requestMtu(150);
+				bluetoothGatt.requestMtu(500);
+				bluetoothGatt.requestConnectionPriority(BluetoothGatt.CONNECTION_PRIORITY_HIGH);
 				BluetoothGattService service = bluetoothGatt.getService(UUID.fromString(BLEProfile.UUID_SERVICE));
 				if (service != null) {
 					BluetoothGattCharacteristic characteristic = service.getCharacteristic(UUID.fromString(BLEProfile.UUID_CHARACTERISTIC));
@@ -283,11 +286,21 @@ public final class BLEClient implements DeviceIntf{
 	@Override
 	public int transfer(byte[] byReq, int byReqLen, byte[] byRes, int timeout) {
 		this.timeOut = timeout;
+		mBuffer = null;
 		boolean isSend = sendData(byReq);
-		if(isSend){
-			return 1;
-		}else{
-			return -1;
+		
+		while(onWrite){
 		}
+		
+		while(mBuffer==null){
+		}
+
+		int i = 0;
+		for(; i<mBuffer.length; i++){ //数据拷贝
+			byRes[i] = mBuffer[i];
+		}
+
+		mBuffer = null;
+		return i;
 	}
 }

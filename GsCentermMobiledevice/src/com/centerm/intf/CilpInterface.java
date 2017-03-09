@@ -1849,7 +1849,7 @@ public class CilpInterface {
 		try {
 			//构造请求报文
 			JSONObject object = new JSONObject();
-			object.put("iEncryType", "4");	// sm2加密
+			object.put("iEncryType", "0");	// 获取普通密码
 			object.put("iLength", "6");		// 最小长度
 			object.put("iTimes", "1");		// 输入密码次数
 			object.put("timeout", String.valueOf(TimeOutUtil.mTimeOut));				
@@ -1888,7 +1888,7 @@ public class CilpInterface {
 					JSONObject recvObj = new JSONObject(new String(mess));
 					JSONObject successObj = new JSONObject();
 					successObj.put("status", REQUEST_SUCCESS);
-					successObj.put("keypad", recvObj.getString("keypad"));
+					successObj.put("keypad", recvObj.getString("firstPIN"));
 					retListener.onSuccess(successObj);
 					retListener = null;
 				} else if (retCode[0] == 0x02) {
@@ -2050,7 +2050,7 @@ public class CilpInterface {
 
 			//发送请求报文
 			JSONObject successObj = new JSONObject();
-			byte[] byRes = new byte[1024];
+			byte[] byRes = new byte[1024*10];
 			int readLen = TransControl.getInstance().transfer(byReq, byReq.length, byRes,
 					(int) TimeOutUtil.mTimeOut);
 			if (readLen <= 0) {
@@ -2141,7 +2141,7 @@ public class CilpInterface {
 					sendAndGetIcCardSerialNo(listener, ctype);
 					break;
 				case IDCARD:
-					ctype = MessageDefUtil.getIDFullInfo;
+					ctype = MessageDefUtil.getIDCardInfo;
 					sendAndGetIdCardInfo(listener, ctype);
 					break;
 				case FINFERGET:
